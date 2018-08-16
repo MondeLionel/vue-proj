@@ -1,17 +1,15 @@
-# Vue-Foursquare [![Build Status](https://travis-ci.org/doganozturk/vue-foursquare.svg?branch=master)](https://travis-ci.org/doganozturk/vue-foursquare)
 
-A SPA (Single Page App.) using Vue.js, vue-cli webpack template, SASS, Pugjs and consumes Foursquare API, especially public '/venues' endpoint. With that data,  you can search for cafes, pizza or sütlaç in any location you want. Results are shown in a beautiful interface and your last ten recent searches are there for you to visit again. When you click on one of the venues, application will take you to appropriate detail page where you can browse pictures of the place and tips by users.
+
+A SPA (Single Page App.) using Vue.js, vue-cli webpack template, SASS, Pugjs and consumes Foursquare API, especially public '/venues' endpoint. With that data,  you can search for cafes, pizza or bars(Yes, even places deemed uncouth) in any location you want. Results are shown in a grid interface and your last ten recent searches are there for you to visit again. When you click on one of the venues, application will take you to appropriate detail page where you can browse pictures of the place and tips by other users.
+
+#note that many geolocation APIs including Foursqaure, Instagram, and all of the Google APIs have placed new and remarkablely tedious monetization 'strangleholds'. Because of this, the experience will not be as smooth as it could be
 
 ### Demo
 https://vue-foursquare.surge.sh
 
 ### Prerequisites
 
-You need Node.js (v6.11.1), NPM and/or Yarn on your local machine. I strongly recommend usage of [NVM](https://github.com/creationix/nvm) for managing different versions of Node on your local machine.
-
-### Installing
-
-Vue-Foursquare uses Vue.js pre-made Webpack template as its base. So you have all commands that come with it and many more!
+Running on a localhost is not recommended unless actively developing(refer to Demo link instead) if you must and if you insist, do use node v6.11.1 and use the ffg commands:
 
 ``` bash
 # install dependencies
@@ -20,11 +18,6 @@ yarn
 # serve with hot reload at localhost:3003
 yarn start
 
-# build for production with minification
-yarn run build
-
-# build for production and view the bundle analyzer report
-yarn run build --report
 ```
 
 ## Running the tests and linters
@@ -33,14 +26,12 @@ Because of time constraints, tests and code coverage tasks are not ready for thi
 
 If you use an text-editor or an IDE that has support for extensions of the mentioned above libraries you can have the comfort of a very robust development environment :)
 
-## Deployment
+## Tidbits/ Technologies used and why.
+1. Pug - For all the lazy FE devs in the world.
+2. Sass - for everyone who hates writing css to the core
+3. VueJS - For all the developers who like things that are well documented with a boatload of active developers.
+4. NodeJS - Well, because Node.
+5. Webpack - Because it comes with the Vue template
 
-Project uses Travis-CI for continuous integration and amazing Surge.sh as its host. You can make appropriate changes and use this project's setup as a boilerplate for your own projects.
-
-## Authors
-
-* **Doğan Öztürk** - [github](https://github.com/doganozturk)
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+## No maps?
+No. The use case would have been fine but maps are essetially much better when they serve an actual purpose. Also because Google is getting very stingy with their Maps API. Project was using Vuetify plugin for google maps geolocation autocomplete. But every keystroke equals an API call! The limits on API calls is very stringent thus was removed from the project. Now using Algolia!! 

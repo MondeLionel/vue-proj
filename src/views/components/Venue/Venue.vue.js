@@ -18,6 +18,9 @@ export default {
     getFeaturedPhoto() {
       const imgSize = "290x290";
       const data = get(this.venue, "venue.featuredPhotos.items[0]");
+      console.log(
+        "the image is" + imgSize + "" + "and here it is" + " " + data
+      );
 
       if (data) return `${data.prefix}${imgSize}${data.suffix}`;
       return false;

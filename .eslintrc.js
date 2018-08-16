@@ -38,6 +38,8 @@ module.exports = {
         vue: "never"
       }
     ],
+    // fix line-break issues
+    "linebreak-style": 0,
     // allow optionalDependencies
     "import/no-extraneous-dependencies": [
       "error",

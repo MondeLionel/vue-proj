@@ -61,8 +61,10 @@ HTTP.fetchVenueById = async id => {
  * GET Venue Photos by Venue ID
  *
  * @param {string} id
+ * 
  * @returns {object}
  */
+
 HTTP.fetchVenuePhotos = async id => {
   try {
     const url = `/${id}/photos?limit=12&client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}&v=${VERSION_DATE}`;
@@ -79,5 +81,13 @@ HTTP.fetchVenuePhotos = async id => {
     };
   }
 };
+
+/**
+ * GET Venue coords by Venue ID
+ *
+ * @param {string} id
+ * 
+ * @returns {object}
+ */
 
 export default HTTP;

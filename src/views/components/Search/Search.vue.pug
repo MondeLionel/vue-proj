@@ -1,8 +1,8 @@
 form(class="search" v-on:submit.prevent="fetchVenues")
 	div(class="form-element")
-		input(type="text" class="keyword" placeholder="I'm looking for" v-model="query")
+		input(type="text" class="keyword" placeholder="Bar, Vape Club..." v-model="query")
 	div(class="form-element")
-		input(type="text" class="place" placeholder="place" v-model="location")
+		input(type="text" class="place" placeholder="Durban, Cape Town..." v-model="location" id="address-input")
 	div(class="form-element")
 		input(type="submit" value="")
 		span
