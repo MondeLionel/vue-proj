@@ -12,7 +12,6 @@
     "**/.history": true,
     "**/views-swig/partial/build": true,
     "**/.yarn_cache": true,
-    "**/yarn.lock": true,
     "**/yarn-error.log": true,
 		"**/typings": true,
 		"**/dist": true,
