@@ -23,5 +23,13 @@ footer {
 				color: lighten($color-footer-link, 10%);
 			}
 		}
+
+		p {
+			font-family: 'Gotham-Medium';
+			font-size: 12px;
+			text-decoration: none;
+			color: $color-footer-link;
+			transition: color 200ms cubic-bezier(0.185, 0.54, 0.355, 1);
+		}
 	}
 }
