@@ -1,5 +1,5 @@
 require("./check-versions")();
-
+//boiler code for webpack build. Nothing to see here
 process.env.NODE_ENV = "production";
 
 const ora = require("ora");
